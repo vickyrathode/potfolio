@@ -1,47 +1,242 @@
-import React, { useEffect, useState } from 'react';
-import { projectsData } from "./Data";
-import { projectsNav } from './Data';
-import ProjectItems from "./ProjectItems";
+// import React, { useState } from 'react';
+
+// const Projects = () => {
+//   // Manually defined project data with images
+//   const [projects] = useState([
+//     {
+//       id: 1,
+//       name: 'AVrestaurant',
+//       description: 'A restaurant website project utilizing HTML and CSS to create a responsive and visually appealing design.',
+//       image: '/images/avrestaurant.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/AVrestaurant',
+//     },
+//     {
+//       id: 2,
+//       name: 'Anime',
+//       description: 'A web development project focusing on animations and interactive UI elements using CSS and HTML.',
+//       image: '/images/anime.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/anime',
+//     },
+//     {
+//       id: 3,
+//       name: 'Calculator',
+//       description: 'A simple calculator application built with HTML and CSS, demonstrating basic arithmetic operations.',
+//       image: '/images/calculator.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/calculator',
+//     },
+//     {
+//       id: 4,
+//       name: 'News Zone',
+//       description: 'A news website project that aggregates and displays news articles, showcasing skills in web development.',
+//       image: '/images/news-zone.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/news-zone',
+//     },
+//     {
+//       id: 5,
+//       name: 'Cricket',
+//       description: 'A cricket-related project, possibly involving statistics or game simulations, developed using web technologies.',
+//       image: '/images/cricket.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/cricket',
+//     },
+//     {
+//       id: 6,
+//       name: 'Portfolio Website',
+//       description: 'A personal portfolio website to showcase my projects, skills, and contact details.',
+//       image: '/images/portfolio.png', // Replace with actual image paths
+//       link: 'https://github.com/vickyrathode/portfolio-website',
+//     },
+//   ]);
+
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const projectsPerPage = 3; // Only 3 projects per page (1 row)
+
+//   // Calculate the projects to display
+//   const indexOfLastProject = currentPage * projectsPerPage;
+//   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+//   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+//   // Handle pagination
+//   const handleNext = () => {
+//     if (currentPage < Math.ceil(projects.length / projectsPerPage)) {
+//       setCurrentPage(currentPage + 1);
+//     }
+//   };
+
+//   const handlePrev = () => {
+//     if (currentPage > 1) {
+//       setCurrentPage(currentPage - 1);
+//     }
+//   };
+
+//   return (
+//     <section id="projects" className="py-16 bg-gray-100">
+//       <div className="container mx-auto text-center">
+//         <h2 className="text-3xl font-bold mb-6">Portfolio</h2>
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//           {currentProjects.map((project) => (
+//             <div
+//               key={project.id}
+//               className="bg-white p-6 rounded shadow-md hover:shadow-lg transition"
+//             >
+//               <img
+//                 src={project.image}
+//                 alt={project.name}
+//                 className="w-full h-40 object-cover rounded-md mb-4"
+//               />
+//               <h3 className="text-xl font-bold">{project.name}</h3>
+//               <p className="mt-2">{project.description}</p>
+//               <a
+//                 href={project.link}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="text-blue-500 mt-4 inline-block"
+//               >
+//                 View Project
+//               </a>
+//             </div>
+//           ))}
+//         </div>
+//         <div className="mt-6 flex justify-center space-x-4">
+//           <button
+//             onClick={handlePrev}
+//             disabled={currentPage === 1}
+//             className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+//           >
+//             Previous
+//           </button>
+//           <button
+//             onClick={handleNext}
+//             disabled={currentPage === Math.ceil(projects.length / projectsPerPage)}
+//             className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+//           >
+//             Next
+//           </button>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Projects;
+
+
+import React, { useState } from 'react';
 
 const Projects = () => {
-    const [item, setItem] =  useState({ name: "All" });
-    const [projects, setProjects] = useState([]);
-    const [active, setActive] = useState(0);
+  // Manually defined project data with images
+  const [projects] = useState([
+    {
+      id: 1,
+      name: 'AVrestaurant',
+      description: 'A restaurant website project utilizing HTML and CSS to create a responsive and visually appealing design.',
+      image: '/images/avrestaurant.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/AVrestaurant',
+    },
+    {
+      id: 2,
+      name: 'Anime',
+      description: 'A web development project focusing on animations and interactive UI elements using CSS and HTML.',
+      image: '/images/anime.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/anime',
+    },
+    {
+      id: 3,
+      name: 'Calculator',
+      description: 'A simple calculator application built with HTML and CSS, demonstrating basic arithmetic operations.',
+      image: '/images/calculator.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/calculator',
+    },
+    {
+      id: 4,
+      name: 'News Zone',
+      description: 'A news website project that aggregates and displays news articles, showcasing skills in web development.',
+      image: '/images/news-zone.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/news-zone',
+    },
+    {
+      id: 5,
+      name: 'Cricket',
+      description: 'A cricket-related project, possibly involving statistics or game simulations, developed using web technologies.',
+      image: '/images/cricket.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/cricket',
+    },
+    {
+      id: 6,
+      name: 'Portfolio Website',
+      description: 'A personal portfolio website to showcase my projects, skills, and contact details.',
+      image: '/images/portfolio.png', // Replace with actual image paths
+      link: 'https://github.com/vickyrathode/portfolio-website',
+    },
+  ]);
 
-useEffect(() => {
-    if (item.name === "All") {
-        setProjects(projectsData);
-    } else {
-        const newProjects = projectsData.filter(project => project.category.includes(item.name));
-        setProjects(newProjects);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 3; // Only 3 projects per page (1 row)
+
+  // Calculate the projects to display
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Handle pagination
+  const handleNext = () => {
+    if (currentPage < Math.ceil(projects.length / projectsPerPage)) {
+      setCurrentPage(currentPage + 1);
     }
-}, [item]);
-    
-    const handleClick  = (e, index) => {
-        setItem({ name: e.target.textContent });
-        setActive(index);
-    };
+  };
 
-    return (
-        <div>
-            <div className="project__filters">
-                {projectsNav.map((item,index) => {
-                    return (
-                        <span onClick={(e) => {
-                            handleClick(e, index);
-                        }}
-                        className={`${active === index ? 'active-project' : ''} project__item`}
-                        key={index}>{item.name}</span>
-                    )
-                })}
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  return (
+    <section id="projects" className="py-16 bg-gray-100">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">Portfolio</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {currentProjects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-white p-6 rounded shadow-md hover:shadow-lg transition"
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-40 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-bold">{project.name}</h3>
+              <p className="mt-2">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 mt-4 inline-block"
+              >
+                View Project
+              </a>
             </div>
-            <div className="project__container container grid">
-                {projects.map((item) => {
-                    return <ProjectItems item={item} key={item.id}/>
-                })}
-            </div>
+          ))}
         </div>
-    );
-}
+        <div className="mt-6 flex justify-center space-x-4">
+          <button
+            onClick={handlePrev}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+          >
+            Previous
+          </button>
+          <button
+            onClick={handleNext}
+            disabled={currentPage === Math.ceil(projects.length / projectsPerPage)}
+            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
