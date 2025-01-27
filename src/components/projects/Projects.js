@@ -119,65 +119,76 @@
 
 // export default Projects;
 
-
 import React, { useState } from 'react';
+import Project1 from "../../assets/project1.webp";
+import Project2 from "../../assets/project2.png";
+import Project3 from "../../assets/project3.webp";
+import Project4 from "../../assets/project4.png";
+import Project5 from "../../assets/project5.jpg";
+import Project6 from "../../assets/project6.png";
+import Project7 from "../../assets/project6.jpg";
+
 
 const Projects = () => {
-  // Manually defined project data with images
   const [projects] = useState([
     {
       id: 1,
-      name: 'AVrestaurant',
-      description: 'A restaurant website project utilizing HTML and CSS to create a responsive and visually appealing design.',
-      image: '/images/avrestaurant.png', // Replace with actual image paths
+      name: 'Restaurant Booking',
+      description: 'A web application for managing restaurant bookings, allowing customers to reserve tables seamlessly.',
+      image: Project1,
       link: 'https://github.com/vickyrathode/AVrestaurant',
     },
     {
       id: 2,
-      name: 'Anime',
-      description: 'A web development project focusing on animations and interactive UI elements using CSS and HTML.',
-      image: '/images/anime.png', // Replace with actual image paths
-      link: 'https://github.com/vickyrathode/anime',
+      name: 'Ecommerce',
+      description: 'An ecommerce platform with advanced features for managing products, orders, and customers.',
+      image: Project2,
+      link: 'https://github.com/vickyrathode/ecommerce',
     },
     {
       id: 3,
-      name: 'Calculator',
-      description: 'A simple calculator application built with HTML and CSS, demonstrating basic arithmetic operations.',
-      image: '/images/calculator.png', // Replace with actual image paths
-      link: 'https://github.com/vickyrathode/calculator',
+      name: 'Image Generator',
+      description: 'A tool to generate AI-powered images based on user prompts, showcasing advanced AI integration.',
+      image: Project3,
+      link: 'https://github.com/vickyrathode/image-generator',
     },
     {
       id: 4,
-      name: 'News Zone',
-      description: 'A news website project that aggregates and displays news articles, showcasing skills in web development.',
-      image: '/images/news-zone.png', // Replace with actual image paths
-      link: 'https://github.com/vickyrathode/news-zone',
+      name: 'Order Panel',
+      description: 'A streamlined order management system for tracking and processing customer orders efficiently.',
+      image: Project4,
+      link: 'https://github.com/vickyrathode/order-panel',
     },
     {
       id: 5,
-      name: 'Cricket',
-      description: 'A cricket-related project, possibly involving statistics or game simulations, developed using web technologies.',
-      image: '/images/cricket.png', // Replace with actual image paths
-      link: 'https://github.com/vickyrathode/cricket',
+      name: 'Weather (API)',
+      description: 'A weather application that fetches real-time weather data using a public API for any location.',
+      image: Project5,
+      link: 'https://github.com/vickyrathode/weather-app',
     },
     {
       id: 6,
       name: 'Portfolio Website',
-      description: 'A personal portfolio website to showcase my projects, skills, and contact details.',
-      image: '/images/portfolio.png', // Replace with actual image paths
+      description: 'A personal portfolio website to showcase my projects, skills, and contact details in a visually appealing way.',
+      image: Project6,
       link: 'https://github.com/vickyrathode/portfolio-website',
+    },
+    {
+      id: 7,
+      name: 'Shopping',
+      description: 'A comprehensive shopping platform with features for browsing, adding items to the cart, and checkout.',
+      image: Project7, // Reusing Project6 for Shopping as an example
+      link: 'https://github.com/vickyrathode/shopping-platform',
     },
   ]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 3; // Only 3 projects per page (1 row)
+  const projectsPerPage = 3;
 
-  // Calculate the projects to display
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
-  // Handle pagination
   const handleNext = () => {
     if (currentPage < Math.ceil(projects.length / projectsPerPage)) {
       setCurrentPage(currentPage + 1);
@@ -222,14 +233,14 @@ const Projects = () => {
           <button
             onClick={handlePrev}
             disabled={currentPage === 1}
-            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
           >
             Previous
           </button>
           <button
             onClick={handleNext}
             disabled={currentPage === Math.ceil(projects.length / projectsPerPage)}
-            className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50`}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
           >
             Next
           </button>
