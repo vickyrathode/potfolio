@@ -118,7 +118,6 @@
 // };
 
 // export default Projects;
-
 import React, { useState } from 'react';
 import Project1 from "../../assets/project1.webp";
 import Project2 from "../../assets/project2.png";
@@ -127,7 +126,6 @@ import Project4 from "../../assets/project4.png";
 import Project5 from "../../assets/project5.jpg";
 import Project6 from "../../assets/project6.png";
 import Project7 from "../../assets/project6.jpg";
-
 
 const Projects = () => {
   const [projects] = useState([
@@ -143,42 +141,42 @@ const Projects = () => {
       name: 'Ecommerce',
       description: 'An ecommerce platform with advanced features for managing products, orders, and customers.',
       image: Project2,
-      link: 'https://github.com/vickyrathode/ecommerce',
+      link: 'https://github.com/vickyrathode/eco',
     },
     {
       id: 3,
       name: 'Image Generator',
       description: 'A tool to generate AI-powered images based on user prompts, showcasing advanced AI integration.',
       image: Project3,
-      link: 'https://github.com/vickyrathode/image-generator',
+      link: 'https://github.com/vickyrathode/imageGEN',
     },
     {
       id: 4,
       name: 'Order Panel',
       description: 'A streamlined order management system for tracking and processing customer orders efficiently.',
       image: Project4,
-      link: 'https://github.com/vickyrathode/order-panel',
+      link: 'https://github.com/vickyrathode/order_panel',
     },
     {
       id: 5,
       name: 'Weather (API)',
       description: 'A weather application that fetches real-time weather data using a public API for any location.',
       image: Project5,
-      link: 'https://github.com/vickyrathode/weather-app',
+      link: 'https://github.com/vickyrathode/weather',
     },
     {
       id: 6,
       name: 'Portfolio Website',
       description: 'A personal portfolio website to showcase my projects, skills, and contact details in a visually appealing way.',
       image: Project6,
-      link: 'https://github.com/vickyrathode/portfolio-website',
+      link: 'https://github.com/vickyrathode/potfolio',
     },
     {
       id: 7,
       name: 'Shopping',
       description: 'A comprehensive shopping platform with features for browsing, adding items to the cart, and checkout.',
-      image: Project7, // Reusing Project6 for Shopping as an example
-      link: 'https://github.com/vickyrathode/shopping-platform',
+      image: Project7,
+      link: 'https://github.com/vickyrathode/shoppings',
     },
   ]);
 
@@ -203,13 +201,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white p-6 rounded shadow-md hover:shadow-lg transition"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
             >
               <img
                 src={project.image}
@@ -217,7 +215,7 @@ const Projects = () => {
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
               <h3 className="text-xl font-bold">{project.name}</h3>
-              <p className="mt-2">{project.description}</p>
+              <p className="mt-2 text-gray-700">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
