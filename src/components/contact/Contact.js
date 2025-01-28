@@ -42,7 +42,7 @@ const Contact = () => {
             <div className="contact__card">
               <HiOutlineMail className="contact__card-icon" />
               <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">vickyratho7339@gmail.com</span>
+              <span className="contact__card-data">vickyrathod7339@gmail.com</span>
               <a href="mailto:vickyratho7339@gmail.com" className="contact__button">
                 Write Me <HiOutlineArrowSmRight className="contact__button-icon" />
               </a>
