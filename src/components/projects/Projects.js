@@ -205,7 +205,6 @@ const Projects = () => {
     backgroundImage: "linear-gradient(to right,rgb(159, 223, 178),rgb(182, 234, 130))",
   }}>
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentProjects.map((project) => (
             <div
@@ -234,14 +233,14 @@ const Projects = () => {
           <button
             onClick={handlePrev}
             disabled={currentPage === 1}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:opacity-50"
           >
             Previous
           </button>
           <button
             onClick={handleNext}
             disabled={currentPage === Math.ceil(projects.length / projectsPerPage)}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:opacity-50"
           >
             Next
           </button>
