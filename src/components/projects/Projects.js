@@ -200,7 +200,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-16 bg-gray-100">
+    <section id="projects" className="py-16 bg-gray-100"  
+    style={{
+    backgroundImage: "linear-gradient(to right,rgb(159, 223, 178),rgb(182, 234, 130))",
+  }}>
       <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-6">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

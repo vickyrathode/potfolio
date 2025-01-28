@@ -9,7 +9,7 @@
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
   /* --title-color-dark: hsl(var(--hue), var(--sat), 0%); */
-  --title-color-dark: hsl(75, 46%, 51%);
+  --title-color-dark: hsl(80, 58%, 38%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
@@ -76,7 +76,7 @@ textarea {
 }
 
 body {
-  background-color: rgb(221, 245, 221);
+  background-image: linear-gradient(to right,rgb(159, 223, 178),rgb(182, 234, 130));
   color: var(--text-color);
 }
 

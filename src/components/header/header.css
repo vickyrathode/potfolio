@@ -4,7 +4,8 @@
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: rgb(212, 248, 212);}
+    background-image: linear-gradient(to right, rgb(154, 227, 176), rgb(180, 235, 124));
+}
 
 .nav {
     height: calc(var(--header-height) + 1.5rem);
