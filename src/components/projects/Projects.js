@@ -134,7 +134,7 @@ const Projects = () => {
       name: 'Restaurant Booking',
       description: 'A web application for managing restaurant bookings, allowing customers to reserve tables seamlessly.',
       image: Project1,
-      link: 'https://github.com/vickyrathode/AVrestaurant',
+      link: 'https://github.com/vickyrathode/rest',
     },
     {
       id: 2,
