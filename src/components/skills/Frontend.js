@@ -18,14 +18,14 @@ const Frontend = () => {
                         <HiCheckBadge />
                         <div>
                             <h3 className="skills__name">CSS</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <span className="skills__level">Advance</span>
                         </div>
                     </div>
                     <div className="skills__data">
                         <HiCheckBadge />
                         <div>
                             <h3 className="skills__name">TailwindCSS</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <span className="skills__level">Advance</span>
                         </div>
                     </div>
                 </div>

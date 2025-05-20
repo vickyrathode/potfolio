@@ -11,21 +11,28 @@ const Backend = () => {
                     <HiCheckBadge />
                     <div>
                         <h3 className="skills__name">MongoDB</h3>
-                        <span className="skills__level">Basic</span>
-                    </div>
-                </div>
-                <div className="skills__data">
-                    <HiCheckBadge />
-                    <div>
-                        <h3 className="skills__name">FireBase</h3>
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 <div className="skills__data">
                     <HiCheckBadge />
                     <div>
+                        <h3 className="skills__name">MySQL</h3>
+                        <span className="skills__level">Intermediate</span>
+                    </div>
+                </div>
+                <div className="skills__data">
+                    <HiCheckBadge />
+                    <div>
+                        <h3 className="skills__name">FireBase</h3>
+                        <span className="skills__level">Advance</span>
+                    </div>
+                </div>
+                <div className="skills__data">
+                    <HiCheckBadge />
+                    <div>
                         <h3 className="skills__name">Express.js</h3>
-                        <span className="skills__level">Basic</span>
+                        <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
             </div>
@@ -33,15 +40,15 @@ const Backend = () => {
                 <div className="skills__data">
                     <HiCheckBadge />
                     <div>
-                        <h3 className="skills__name">npm</h3>
-                        <span className="skills__level">Basic</span>
+                        <h3 className="skills__name">FastAPI</h3>
+                        <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 <div className="skills__data">
                     <HiCheckBadge />
                     <div>
                         <h3 className="skills__name">Node.js</h3>
-                        <span className="skills__level">Basic</span>
+                        <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
                 <div className="skills__data">
