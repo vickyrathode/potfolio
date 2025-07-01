@@ -59,7 +59,7 @@
 }
 
 .home__img {
-    background: url(../../assets//profileBW.png);
+    background: url(../../assets//4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -76,9 +76,11 @@
     0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
+
     50% {
         border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
+
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
@@ -96,6 +98,7 @@
     0% {
         transform: translateY(0);
     }
+
     30% {
         transform: translateY(3.75rem);
     }
@@ -134,7 +137,7 @@
         width: 42px;
         top: 0.8rem;
     }
-    
+
     .home__description {
         max-width: initial;
         margin-bottom: var(--mb-2-5);
@@ -150,6 +153,7 @@
         margin-left: 7.5rem;
     }
 }
+
 @media screen and (max-width: 768px) {
     .home__content {
         grid-template-columns: 0.5fr 3fr;
@@ -172,6 +176,7 @@
         display: none;
     }
 }
+
 @media screen and (max-width: 350px) {
     .home__img {
         width: 180px;
