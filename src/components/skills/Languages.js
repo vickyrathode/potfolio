@@ -22,9 +22,10 @@ function Languages() {
                         <span className="skills__level">Intermediate</span>
                     </div>
                 </div>
+
             </div>
             <div className="skills__group">
-                              <div className="skills__data">
+                <div className="skills__data">
                     <HiCheckBadge />
                     <div>
                         <h3 className="skills__name">C++</h3>
@@ -38,9 +39,9 @@ function Languages() {
                         <span className="skills__level">Advance</span>
                     </div>
                 </div>
-
-
+            
             </div>
+
         </div>
     </div>
   )
